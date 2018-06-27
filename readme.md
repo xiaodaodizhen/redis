@@ -71,3 +71,28 @@
 - lindex ids 0   查看索引为0 的值
 
 - llen ids 查看列表长度
+
+
+## 集合 ：是字符串类型的《无序》集合
+- sadd tags xg  添加集合
+- smembers tags 查看集合
+- scard tags 查看集合元素个数
+- srem tags 4 删除元素4
+
+#### 集合(无序)运算
+- sadd A 123
+- sadd B 234
+- sinter A B   获取AB两个集合的交集
+- sdiff A B    获取AB 两个集合的差集
+- sunion A B   获取并集
+
+## 有序集合  有序集合与无序集合的区别是，每个集合都会关联一个double类型的分数，redis可以通过这个分类来为集合中的元素从小到大排列，元素不能重复，但是分数能
+- zadd tus 1 zhangsan 5 lisi 2 zhangwu   添加元素
+- zrange tus 0 -1 排序后的名字列表，不包含分数
+- zrange tus 0 -1 withscores   包含分数的名字列表
+- zrem tus zhangsan  删除
+
+
+
+
+##----------------------------------------redis事务---------------------------------------------------
